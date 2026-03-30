@@ -20,8 +20,8 @@
  * @author Sajani G
  * @version 2.0
  */
-
-public class UseCase2TrainConsistMgmt {
+import java.util.*;
+public class TrainConsistManagementApp{
 
     public static void main(String[] args) {
 
