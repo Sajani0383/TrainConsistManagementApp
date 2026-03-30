@@ -17,7 +17,7 @@
  *
  * This maps positional operations using LinkedList.
  *
- * @author Developer
+ * @author Sajani G
  * @version 4.0
  */
 import java.util.*;
