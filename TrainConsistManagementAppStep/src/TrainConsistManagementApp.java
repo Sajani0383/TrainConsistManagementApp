@@ -18,7 +18,7 @@
  * This use case introduces collection initialization and
  * basic program startup flow.
  *
- * @author Developer
+ * @author Sajani G
  * @version 1.0
  */
 import java.util.*;
