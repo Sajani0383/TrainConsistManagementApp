@@ -1,42 +1,37 @@
 /**
- *  ============================================================
- *  * MAIN CLASS - UseCase11TrainConsistMgmt
- *  * ============================================================
- *  *
- *  * Use Case 11: Count Total Seats using reduce()
+ * ============================================================
+ * MAIN CLASS - UseCase12SafetyCheck
+ * ============================================================
+ *
+ * Use Case 12: Safety Compliance Check for Goods Bogies
  *
  * @author Sajani G
- * @version 11.0
+ * @version 12.0
  */
 import java.util.*;
 import java.util.regex.*;
-public class TrainConsistManagementApp {
+public class TrainConsistManagementApp  {
+    static class Bogie {
+        String type;
+        String cargo;
+        Bogie(String type, String cargo) {
+            this.type = type;
+            this.cargo = cargo;
+        }
+    }
     public static void main(String[] args) {
-
-        System.out.println("===== UC11 - Regex Validation =====\n");
-
-        // Sample Inputs
-        String trainId = "TRN-1234";
-        String cargoCode = "PET-AB";
-
-        // Regex Patterns
-        String trainPattern = "TRN-\\d{4}";
-        String cargoPattern = "PET-[A-Z]{2}";
-
-        // Compile patterns
-        Pattern p1 = Pattern.compile(trainPattern);
-        Pattern p2 = Pattern.compile(cargoPattern);
-
-        // Match input
-        Matcher m1 = p1.matcher(trainId);
-        Matcher m2 = p2.matcher(cargoCode);
-
-        // Validate
-        boolean isTrainValid = m1.matches();
-        boolean isCargoValid = m2.matches();
-
-        // Output
-        System.out.println("Train ID: " + trainId + " -> " + (isTrainValid ? "Valid" : "Invalid"));
-        System.out.println("Cargo Code: " + cargoCode + " -> " + (isCargoValid ? "Valid" : "Invalid"));
+        System.out.println("===== UC12 - Safety Compliance Check =====\n");
+        List<Bogie> bogies = Arrays.asList(
+                new Bogie("Cylindrical", "Petroleum"),
+                new Bogie("Open", "Coal"),
+                new Bogie("Box", "Grain")
+        );
+        boolean isSafe = bogies.stream()
+                .allMatch(b ->
+                        !b.type.equals("Cylindrical") ||
+                                b.cargo.equals("Petroleum")
+                );
+        System.out.println("Train Safety Status: " +
+                (isSafe ? "SAFE ✅" : "UNSAFE ❌"));
     }
 }

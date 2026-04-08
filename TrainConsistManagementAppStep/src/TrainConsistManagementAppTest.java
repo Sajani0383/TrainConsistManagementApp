@@ -1,19 +1,66 @@
 import java.util.*;
 import java.util.regex.*;
 public class TrainConsistManagementAppTest {
+    static class Bogie {
+        String type;
+        String cargo;
+        Bogie(String type, String cargo) {
+            this.type = type;
+            this.cargo = cargo;
+        }
+    }
+    static boolean checkSafety(List<Bogie> bogies) {
+        return bogies.stream()
+                .allMatch(b ->
+                        !b.type.equals("Cylindrical") ||
+                                b.cargo.equals("Petroleum")
+                );
+    }
     public static void main(String[] args) {
-        System.out.println("===== UC11 - Regex Validation =====\n");
-        String trainId = "TRN-1234";
-        String cargoCode = "PET-AB";
-        String trainPattern = "TRN-\\d{4}";
-        String cargoPattern = "PET-[A-Z]{2}";
-        Pattern p1 = Pattern.compile(trainPattern);
-        Pattern p2 = Pattern.compile(cargoPattern);
-        Matcher m1 = p1.matcher(trainId);
-        Matcher m2 = p2.matcher(cargoCode);
-        boolean isTrainValid = m1.matches();
-        boolean isCargoValid = m2.matches();
-        System.out.println("Train ID: " + trainId + " -> " + (isTrainValid ? "Valid" : "Invalid"));
-        System.out.println("Cargo Code: " + cargoCode + " -> " + (isCargoValid ? "Valid" : "Invalid"));
+        System.out.println("====== UC-12 TEST CASES ======\n");
+        testSafety_AllBogiesValid();
+        testSafety_CylindricalWithInvalidCargo();
+        testSafety_NonCylindricalBogiesAllowed();
+        testSafety_MixedBogiesWithViolation();
+        testSafety_EmptyBogieList();
+    }
+    static void testSafety_AllBogiesValid() {
+        List<Bogie> bogies = Arrays.asList(
+                new Bogie("Cylindrical", "Petroleum"),
+                new Bogie("Open", "Coal")
+        );
+        System.out.println("Test All Valid: " +
+                (checkSafety(bogies) ? "PASS" : "FAIL"));
+    }
+    static void testSafety_CylindricalWithInvalidCargo() {
+        List<Bogie> bogies = Arrays.asList(
+                new Bogie("Cylindrical", "Coal")
+        );
+
+        System.out.println("Test Cylindrical Wrong Cargo: " +
+                (!checkSafety(bogies) ? "PASS" : "FAIL"));
+    }
+    static void testSafety_NonCylindricalBogiesAllowed() {
+        List<Bogie> bogies = Arrays.asList(
+                new Bogie("Open", "Coal"),
+                new Bogie("Box", "Grain")
+        );
+
+        System.out.println("Test Non-Cylindrical: " +
+                (checkSafety(bogies) ? "PASS" : "FAIL"));
+    }
+    static void testSafety_MixedBogiesWithViolation() {
+        List<Bogie> bogies = Arrays.asList(
+                new Bogie("Cylindrical", "Petroleum"),
+                new Bogie("Cylindrical", "Coal") // invalid
+        );
+        System.out.println("Test Mixed Violation: " +
+                (!checkSafety(bogies) ? "PASS" : "FAIL"));
+    }
+    static void testSafety_EmptyBogieList() {
+        List<Bogie> bogies = new ArrayList<>();
+
+        System.out.println("Test Empty List: " +
+                (checkSafety(bogies) ? "PASS" : "FAIL"));
     }
 }
