@@ -1,78 +1,19 @@
 import java.util.*;
-import java.util.*;
-import java.util.stream.*;
+import java.util.regex.*;
 public class TrainConsistManagementAppTest {
-    static class Bogie {
-        String name;
-        int capacity;
-        Bogie(String name, int capacity) {
-            this.name = name;
-            this.capacity = capacity;
-        }
-    }
-    static int calculateTotalSeats(List<Bogie> bogies) {
-        return bogies.stream()
-                .map(b -> b.capacity)
-                .reduce(0, Integer::sum);
-    }
-    static void testReduce_TotalSeatCalculation() {
-        List<Bogie> bogies = Arrays.asList(
-                new Bogie("B1", 70),
-                new Bogie("B2", 80)
-        );
-        int result = calculateTotalSeats(bogies);
-        System.out.println("Test Total Calculation: " +
-                (result == 150 ? "PASS" : "FAIL"));
-    }
-    static void testReduce_MultipleBogiesAggregation() {
-        List<Bogie> bogies = Arrays.asList(
-                new Bogie("B1", 30),
-                new Bogie("B2", 40),
-                new Bogie("B3", 50)
-        );
-        int result = calculateTotalSeats(bogies);
-        System.out.println("Test Multiple Bogies: " +
-                (result == 120 ? "PASS" : "FAIL"));
-    }
-    static void testReduce_SingleBogieCapacity() {
-        List<Bogie> bogies = Arrays.asList(
-                new Bogie("B1", 60)
-        );
-        int result = calculateTotalSeats(bogies);
-        System.out.println("Test Single Bogie: " +
-                (result == 60 ? "PASS" : "FAIL"));
-    }
-    static void testReduce_EmptyBogieList() {
-        List<Bogie> bogies = new ArrayList<>();
-        int result = calculateTotalSeats(bogies);
-        System.out.println("Test Empty List: " +
-                (result == 0 ? "PASS" : "FAIL"));
-    }
-    static void testReduce_AllBogiesIncluded() {
-        List<Bogie> bogies = Arrays.asList(
-                new Bogie("B1", 10),
-                new Bogie("B2", 20),
-                new Bogie("B3", 30)
-        );
-        int result = calculateTotalSeats(bogies);
-        System.out.println("Test All Included: " +
-                (result == 60 ? "PASS" : "FAIL"));
-    }
-    static void testReduce_OriginalListUnchanged() {
-        List<Bogie> bogies = new ArrayList<>();
-        bogies.add(new Bogie("B1", 50));
-        int originalSize = bogies.size();
-        calculateTotalSeats(bogies);
-        System.out.println("Test Original List Unchanged: " +
-                (bogies.size() == originalSize ? "PASS" : "FAIL"));
-    }
     public static void main(String[] args) {
-        System.out.println("====== UC-10 TEST CASES ======\n");
-        testReduce_TotalSeatCalculation();
-        testReduce_MultipleBogiesAggregation();
-        testReduce_SingleBogieCapacity();
-        testReduce_EmptyBogieList();
-        testReduce_AllBogiesIncluded();
-        testReduce_OriginalListUnchanged();
+        System.out.println("===== UC11 - Regex Validation =====\n");
+        String trainId = "TRN-1234";
+        String cargoCode = "PET-AB";
+        String trainPattern = "TRN-\\d{4}";
+        String cargoPattern = "PET-[A-Z]{2}";
+        Pattern p1 = Pattern.compile(trainPattern);
+        Pattern p2 = Pattern.compile(cargoPattern);
+        Matcher m1 = p1.matcher(trainId);
+        Matcher m2 = p2.matcher(cargoCode);
+        boolean isTrainValid = m1.matches();
+        boolean isCargoValid = m2.matches();
+        System.out.println("Train ID: " + trainId + " -> " + (isTrainValid ? "Valid" : "Invalid"));
+        System.out.println("Cargo Code: " + cargoCode + " -> " + (isCargoValid ? "Valid" : "Invalid"));
     }
 }
