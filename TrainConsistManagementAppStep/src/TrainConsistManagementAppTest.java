@@ -40,5 +40,6 @@ class TrainConsistManagementAppTest {
         String[] input = {"Sleeper"};
         String[] expected = {"Sleeper"};
         assertArrayEquals(expected, sort(input));
+
     }
 }
