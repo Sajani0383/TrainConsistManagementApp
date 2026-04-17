@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a197a5d-aaf4-442e-86aa-6bfbf332838c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TrainConsistManagementAppStep/src/TrainConsistManagementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrainConsistManagementAppStep/src/TrainConsistManagementApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TrainConsistManagementAppStep/src/TrainConsistManagementAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrainConsistManagementAppStep/src/TrainConsistManagementAppTest.java" afterDir="false" />
     </list>
@@ -15,24 +14,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="LOCAL">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="UC13" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="UC14" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -47,21 +28,11 @@
   "keyToString": {
     "Application.TrainConsistManagementApp.executor": "Run",
     "Application.UseCase13TrainConsistMgmt.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.TrainConsistManagementAppTest.testException_MultipleValidBogiesCreation.executor": "Run",
-    "JUnit.TrainConsistManagementAppTest.testException_ValidCapacityCreation.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "UC13",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "kotlin-language-version-configured": "true"
   }
 }]]></component>
   <component name="RunManager" selected="Application.TrainConsistManagementApp">
@@ -79,31 +50,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrainConsistManagementAppTest.testException_MultipleValidBogiesCreation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TrainConsistManagementAppStep" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TrainConsistManagementAppTest" />
-      <option name="METHOD_NAME" value="testException_MultipleValidBogiesCreation" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrainConsistManagementAppTest.testException_ValidCapacityCreation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TrainConsistManagementAppStep" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TrainConsistManagementAppTest" />
-      <option name="METHOD_NAME" value="testException_ValidCapacityCreation" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.TrainConsistManagementApp" />
-        <item itemvalue="JUnit.TrainConsistManagementAppTest.testException_ValidCapacityCreation" />
-        <item itemvalue="JUnit.TrainConsistManagementAppTest.testException_MultipleValidBogiesCreation" />
         <item itemvalue="Application.UseCase13TrainConsistMgmt" />
       </list>
     </recent_temporary>
