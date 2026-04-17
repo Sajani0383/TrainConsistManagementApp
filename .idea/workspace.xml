@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6a197a5d-aaf4-442e-86aa-6bfbf332838c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/TrainConsistManagementAppStep/src/TrainConsistManagementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrainConsistManagementAppStep/src/TrainConsistManagementApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrainConsistManagementAppStep/src/TrainConsistManagementAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrainConsistManagementAppStep/src/TrainConsistManagementAppTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="3CQx2XUJxQTSauezx28pL9Rithf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.TrainConsistManagementApp.executor": "Run",
+    "Application.UseCase13TrainConsistMgmt.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "UC13",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.TrainConsistManagementApp">
+    <configuration name="TrainConsistManagementApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TrainConsistManagementApp" />
+      <module name="TrainConsistManagementAppStep" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UseCase13TrainConsistMgmt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UseCase13TrainConsistMgmt" />
+      <module name="TrainConsistManagementAppStep" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TrainConsistManagementApp" />
+        <item itemvalue="Application.UseCase13TrainConsistMgmt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6a197a5d-aaf4-442e-86aa-6bfbf332838c" name="Changes" comment="" />
+      <created>1776331387391</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1776331387391</updated>
+    </task>
+    <servers />
+  </component>
+</project>
