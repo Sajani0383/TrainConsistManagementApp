@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a197a5d-aaf4-442e-86aa-6bfbf332838c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TrainConsistManagementAppStep/src/TrainConsistManagementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrainConsistManagementAppStep/src/TrainConsistManagementApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TrainConsistManagementAppStep/src/TrainConsistManagementAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrainConsistManagementAppStep/src/TrainConsistManagementAppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TrainConsistManagementApp/TrainConsistManagementApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrainConsistManagementApp/TrainConsistManagementApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TrainConsistManagementApp/TrainConsistManagementAppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrainConsistManagementApp/TrainConsistManagementAppTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +39,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "UC16",
+    "git-widget-placeholder": "UC18",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
