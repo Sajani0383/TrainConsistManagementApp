@@ -1,57 +1,57 @@
 import org.junit.jupiter.api.Test;
 import java.util.*;
 import static org.junit.jupiter.api.Assertions.*;
-class QuantityMeasurementAppTest {
-    List<UseCase13TrainConsistMgmt.Bogie> createTestData() {
-        List<UseCase13TrainConsistMgmt.Bogie> list = new ArrayList<>();
-        list.add(new UseCase13TrainConsistMgmt.Bogie("Passenger", 50));
-        list.add(new UseCase13TrainConsistMgmt.Bogie("Passenger", 70));
-        list.add(new UseCase13TrainConsistMgmt.Bogie("Goods", 80));
-        list.add(new UseCase13TrainConsistMgmt.Bogie("Goods", 40));
+class TrainConsistManagementAppTest {
+    List<TrainConsistManagementApp.Bogie> createTestData() {
+        List<TrainConsistManagementApp.Bogie> list = new ArrayList<>();
+        list.add(new TrainConsistManagementApp.Bogie("Passenger", 50));
+        list.add(new TrainConsistManagementApp.Bogie("Passenger", 70));
+        list.add(new TrainConsistManagementApp.Bogie("Goods", 80));
+        list.add(new TrainConsistManagementApp.Bogie("Goods", 40));
         return list;
     }
+
     @Test
     void testLoopFilteringLogic() {
-        List<UseCase13TrainConsistMgmt.Bogie> data = createTestData();
-        List<UseCase13TrainConsistMgmt.Bogie> result =
-                UseCase13TrainConsistMgmt.filterWithLoop(data);
-        for (UseCase13TrainConsistMgmt.Bogie b : result) {
+        List<TrainConsistManagementApp.Bogie> data = createTestData();
+        List<TrainConsistManagementApp.Bogie> result =
+                TrainConsistManagementApp.filterWithLoop(data);
+        for (TrainConsistManagementApp.Bogie b : result) {
             assertTrue(b.capacity > 60);
         }
     }
     @Test
     void testStreamFilteringLogic() {
-        List<UseCase13TrainConsistMgmt.Bogie> data = createTestData();
-        List<UseCase13TrainConsistMgmt.Bogie> result =
-                UseCase13TrainConsistMgmt.filterWithStream(data);
-
-        for (UseCase13TrainConsistMgmt.Bogie b : result) {
+        List<TrainConsistManagementApp.Bogie> data = createTestData();
+        List<TrainConsistManagementApp.Bogie> result =
+                TrainConsistManagementApp.filterWithStream(data);
+        for (TrainConsistManagementApp.Bogie b : result) {
             assertTrue(b.capacity > 60);
         }
     }
     @Test
     void testLoopAndStreamResultsMatch() {
-        List<UseCase13TrainConsistMgmt.Bogie> data = createTestData();
-        int loopSize = UseCase13TrainConsistMgmt.filterWithLoop(data).size();
-        int streamSize = UseCase13TrainConsistMgmt.filterWithStream(data).size();
+        List<TrainConsistManagementApp.Bogie> data = createTestData();
+        int loopSize = TrainConsistManagementApp.filterWithLoop(data).size();
+        int streamSize = TrainConsistManagementApp.filterWithStream(data).size();
         assertEquals(loopSize, streamSize);
     }
     @Test
     void testExecutionTimeMeasurement() {
-        List<UseCase13TrainConsistMgmt.Bogie> data = createTestData();
-        long loopTime = UseCase13TrainConsistMgmt.measureLoopTime(data);
-        long streamTime = UseCase13TrainConsistMgmt.measureStreamTime(data);
+        List<TrainConsistManagementApp.Bogie> data = createTestData();
+        long loopTime = TrainConsistManagementApp.measureLoopTime(data);
+        long streamTime = TrainConsistManagementApp.measureStreamTime(data);
         assertTrue(loopTime > 0);
         assertTrue(streamTime > 0);
     }
     @Test
     void testLargeDatasetProcessing() {
-        List<UseCase13TrainConsistMgmt.Bogie> data = new ArrayList<>();
+        List<TrainConsistManagementApp.Bogie> data = new ArrayList<>();
         for (int i = 0; i < 10000; i++) {
-            data.add(new UseCase13TrainConsistMgmt.Bogie("Passenger", i % 100));
+            data.add(new TrainConsistManagementApp.Bogie("Passenger", i % 100));
         }
-        List<UseCase13TrainConsistMgmt.Bogie> result =
-                UseCase13TrainConsistMgmt.filterWithStream(data);
+        List<TrainConsistManagementApp.Bogie> result =
+                TrainConsistManagementApp.filterWithStream(data);
         assertNotNull(result);
     }
 }

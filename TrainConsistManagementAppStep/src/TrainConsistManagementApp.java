@@ -2,7 +2,7 @@ import java.util.*;
 import java.util.stream.*;
 /**
  * ===============================================================
- * MAIN CLASS - UseCase13TrainConsistMgmt
+ * MAIN CLASS - TrainConsistManagementApp
  * ===============================================================
  *
  * Use Case 13: Performance Comparison (Loops vs Streams)
@@ -18,13 +18,10 @@ import java.util.stream.*;
  * - Calculates elapsed duration
  * - Displays performance results
  *
- * This demonstrates performance benchmarking using
- * high-resolution timing.
- *
  * @author Sajani G
  * @version 13.0
  */
-public class UseCase13TrainConsistMgmt {
+public class TrainConsistManagementApp {
     static class Bogie {
         String type;
         int capacity;
@@ -73,6 +70,7 @@ public class UseCase13TrainConsistMgmt {
         System.out.println("Stream Execution Time (ns): " + streamTime);
         List<Bogie> loopResult = filterWithLoop(bogies);
         List<Bogie> streamResult = filterWithStream(bogies);
+
         System.out.println("\nResults Match: " + (loopResult.size() == streamResult.size()));
         System.out.println("\nUC13 performance benchmarking completed...");
     }
